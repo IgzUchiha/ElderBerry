@@ -11,8 +11,8 @@ const PageContainer = styled.div`
 const BannerSection = styled.section`
   width: 100%;
   height: 200px;
-  background: url('/Sups.png') center top / cover no-repeat;
   position: relative;
+  overflow: hidden;
   
   &::after {
     content: '';
@@ -20,13 +20,21 @@ const BannerSection = styled.section`
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 40px;
     background: linear-gradient(180deg, transparent 0%, #f5eef5 100%);
+    z-index: 1;
   }
   
   @media (min-width: 768px) {
     height: 280px;
   }
+`;
+
+const BannerImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 `;
 
 const HeroSection = styled.section`
@@ -425,7 +433,15 @@ const recipes = [
 export default function AdvancedRecipesPage() {
   return (
     <PageContainer>
-      <BannerSection />
+      <BannerSection>
+        <BannerImage
+          src="/Supsy.PNG"
+          alt="American Elderberry"
+          width={1200}
+          height={600}
+          priority
+        />
+      </BannerSection>
       <HeroSection>
         <HeroContent>
           <ProductImageContainer>
