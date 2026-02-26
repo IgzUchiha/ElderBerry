@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 const HeroSection = styled.section`
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
   background: 
     radial-gradient(ellipse at 30% 20%, rgba(196, 168, 196, 0.25) 0%, transparent 50%),
     radial-gradient(ellipse at 70% 80%, rgba(139, 107, 139, 0.15) 0%, transparent 50%),
@@ -17,6 +17,11 @@ const HeroSection = styled.section`
   position: relative;
   overflow: hidden;
   text-align: center;
+  
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 90px);
+    padding: 4rem 2rem;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -48,6 +53,12 @@ const ProductShowcase = styled.div`
 const ProductImage = styled(Image)`
   filter: drop-shadow(0 20px 40px rgba(61, 32, 64, 0.25));
   transition: transform 0.5s ease;
+  max-width: 250px;
+  height: auto;
+  
+  @media (min-width: 768px) {
+    max-width: 400px;
+  }
   
   &:hover {
     transform: scale(1.02);
@@ -56,37 +67,54 @@ const ProductImage = styled(Image)`
 
 const HeroTagline = styled.p`
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #8b6b8b;
   margin-bottom: 0.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+  }
 `;
 
 const HeroTitle = styled.h1`
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #3d2040;
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
+  
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const HeroSubtitle = styled.p`
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: #5a3a5a;
   max-width: 600px;
-  margin-bottom: 2rem;
-  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  padding: 0 0.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    padding: 0;
+  }
 `;
 
 const CTAButton = styled.a`
   display: inline-block;
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 1.8rem;
   background: linear-gradient(135deg, #4a2c4a 0%, #5a3a5a 100%);
   color: #faf8fa;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 50px;
@@ -94,6 +122,11 @@ const CTAButton = styled.a`
   transition: all 0.4s ease;
   box-shadow: 0 4px 20px rgba(74, 44, 74, 0.3);
   text-decoration: none;
+  
+  @media (min-width: 768px) {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+  }
   
   &:hover {
     transform: translateY(-3px);
