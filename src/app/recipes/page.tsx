@@ -10,7 +10,7 @@ const PageContainer = styled.div`
 
 const BannerSection = styled.section`
   width: 100%;
-  height: 200px;
+  height: 120px;
   position: relative;
   overflow: hidden;
   
@@ -20,13 +20,17 @@ const BannerSection = styled.section`
     bottom: 0;
     left: 0;
     right: 0;
-    height: 40px;
+    height: 30px;
     background: linear-gradient(180deg, transparent 0%, #f5eef5 100%);
     z-index: 1;
   }
   
   @media (min-width: 768px) {
-    height: 280px;
+    height: 200px;
+  }
+  
+  @media (min-width: 1024px) {
+    height: 260px;
   }
 `;
 
@@ -38,9 +42,13 @@ const BannerImage = styled(Image)`
 `;
 
 const HeroSection = styled.section`
-  padding: 3rem 2rem 4rem;
+  padding: 2rem 1rem 3rem;
   text-align: center;
   background: linear-gradient(180deg, #f5eef5 0%, #e8d8e8 100%);
+  
+  @media (min-width: 768px) {
+    padding: 3rem 2rem 4rem;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -89,6 +97,12 @@ const ProductImage = styled(Image)`
   z-index: 1;
   filter: drop-shadow(0 20px 40px rgba(61, 32, 64, 0.25));
   transition: transform 0.5s ease;
+  max-width: 180px;
+  height: auto;
+  
+  @media (min-width: 768px) {
+    max-width: 260px;
+  }
   
   &:hover {
     transform: scale(1.02);
@@ -96,9 +110,13 @@ const ProductImage = styled(Image)`
 `;
 
 const PageTitle = styled.h1`
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   color: #3d2040;
   margin-bottom: 0.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: 2.8rem;
+  }
 `;
 
 const Subtitle = styled.p`
