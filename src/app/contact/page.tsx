@@ -238,7 +238,7 @@ export default function Contact() {
             <InfoItem>
               <InfoIcon>📧</InfoIcon>
               <InfoLabel>Email</InfoLabel>
-              <InfoText>hello@elderfarms.com</InfoText>
+              <InfoText>info@leimyasco-op.com</InfoText>
             </InfoItem>
             
             <InfoItem>
